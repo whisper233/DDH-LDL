@@ -319,9 +319,8 @@ def write_result(args, result, best_func_epoch, path):
         mode = 'a'
 
     with open(path, mode) as f:
-        f.write('%5s %5d %10d %10d %8d %11.5f %11.5f %14.5f %5.5f %5.5f %5.5f %5.5f ----- %7.4f %7.4f %7.4f %7.4f %7.4f %7.4f\n' %\
-             (args.seq, args.epoch, args.epoch_code, best_func_epoch, args.max_iter, args.lr_code_net, args.lr_func_net, args.triplet_margin, \
-                 args.eta, args.alpha, args.beta, args.sigma, \
+        f.write('%5s %10d %10d %8d %11.5f %11.5f %5.2f %5.2f ----- %7.4f %7.4f %7.4f %7.4f %7.4f %7.4f\n' %\
+             (args.seq, args.epoch_code, best_func_epoch, args.dom_iter, args.lr_code_net, args.lr_func_net, args.alpha, args.beta, \
                      result[0], result[1], result[2], result[3], result[4], result[5])) 
 
 #def eval_hash_code(B1, B2, label1, label2, topk):
